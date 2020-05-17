@@ -42,4 +42,72 @@ $ git add README.md (add o arquivo desejado, no caso o readme.md)
 0@DESKTOP-B3NGBOJ MINGW64 ~/Desktop/modulogit (master)
 $ git add -A (forma de add todos os arquivos nao traqueados)
 
+0@DESKTOP-B3NGBOJ MINGW64 ~/Desktop/modulogit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:(todos os arquivos foram add)
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   aulas do GitHub.txt
+        new file:   md
+
+0@DESKTOP-B3NGBOJ MINGW64 ~/Desktop/modulogit (master)
+$ git commit -m "Primeiro Commit" (forma de colocar commits, entre aspas é a frase desejada)
+[master (root-commit) acfe379] Primeiro Commit
+ 3 files changed, 46 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 aulas do GitHub.txt
+ create mode 100644 md
+
+0@DESKTOP-B3NGBOJ MINGW64 ~/Desktop/modulogit (master)
+$ git log (mostra todos os commits feitos)
+commit acfe3794c252de85053e2cdf54a9684b2d5bceb4 (HEAD -> master)
+Author: Izaias <izaiasrcampos3@hotmail.com>
+Date:   Sun May 17 15:32:50 2020 -0300
+
+    Primeiro Commit
+
+
+0@DESKTOP-B3NGBOJ MINGW64 ~/Desktop/modulogit (master) (segunda modificação feita no trabalho)	
+$ git commit -m "criando os arquivos principais, index e style, bem como modificando README"
+[master cb7e309] criando os arquivos principais, index e style, bem como modificando README
+ 4 files changed, 23 insertions(+), 1 deletion(-)
+ create mode 100644 index.html
+ create mode 100644 style.css
+
+
+0@DESKTOP-B3NGBOJ MINGW64 ~/Desktop/modulogit (master)
+$ git branch (comando para saber qual branch esta)
+* master
+
+
+0@DESKTOP-B3NGBOJ MINGW64 ~/Desktop/modulogit (master)
+$ git commit -am "adicionei o index e alterei o readme" (comando -am add os arquivos e o commit)
+[master 250f9b9] adicionei o index e alterei o readme
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ rename index.html => index2.html (100%)
+
+
+Comando para resetar alterações
+git reset --soft (endereço do commit, 7 primeiros digitos ou total)
+git reset --mixed (endereço do commit, 7 primeiros digitos ou total)
+git reset --hard (endereço do commit, 7 primeiros digitos ou total)
+
+soft retorna ao commit desejado e deixa os commits anteriores prontos para serem executados (mais recomendado)
+
+mixed faz a mesma coisa do soft, porem, tera que add os commits que ja foram add anteriormente caso desejado
+
+hard ignora todos os commits add e retorna para o comite desejado como se nada tivesse acontecido (pouco recomendado em trabalhos em equipe)
+
+
+(exemplo abaixo de reset hard voltando para o primeiro commit)
+0@DESKTOP-B3NGBOJ MINGW64 ~/Desktop/modulogit (master)
+$ git reset --hard acfe3794c252de85053e2cdf54a9684b2d5bceb4
+HEAD is now at acfe379 Primeiro Commit
+
+
+
 
